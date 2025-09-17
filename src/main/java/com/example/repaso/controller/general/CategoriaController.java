@@ -4,23 +4,26 @@ import com.example.repaso.dto.CategoriaDTO;
 import com.example.repaso.entity.Categoria;
 import com.example.repaso.repository.CategoriaRepository;
 import com.example.repaso.service.service.CategoriaService;
+import lombok.extern.slf4j.Slf4j;
 import org.hibernate.service.spi.ServiceException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@Slf4j
 @RestController
 @RequestMapping("/api/v1/categorias")
 public class CategoriaController {
     private final CategoriaService categoriaService;
 
     public CategoriaController(CategoriaService categoriaService) {
+
         this.categoriaService = categoriaService;
     }
     @GetMapping
     public ResponseEntity<List<CategoriaDTO>> listAll() throws ServiceException {
+
         return ResponseEntity.ok(categoriaService.findAll());
     }
     @GetMapping("/{id}")
