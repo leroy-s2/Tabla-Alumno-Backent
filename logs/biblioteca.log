@@ -1,0 +1,277 @@
+2025-09-15T17:51:26.851-05:00  INFO 12868 --- [repaso] [main] com.example.repaso.RepasoApplication     : Starting RepasoApplication using Java 21.0.6 with PID 12868 (C:\Users\docente.fia\Documents\lp2\repaso\target\classes started by docente.fia in C:\Users\docente.fia\Documents\lp2\repaso)
+2025-09-15T17:51:26.856-05:00  INFO 12868 --- [repaso] [main] com.example.repaso.RepasoApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-09-15T17:51:28.025-05:00  INFO 12868 --- [repaso] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-15T17:51:28.109-05:00  INFO 12868 --- [repaso] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 1 JPA repository interface.
+2025-09-15T17:51:28.651-05:00  INFO 12868 --- [repaso] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2025-09-15T17:51:28.672-05:00  INFO 12868 --- [repaso] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-15T17:51:28.672-05:00  INFO 12868 --- [repaso] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-15T17:51:28.731-05:00  INFO 12868 --- [repaso] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-15T17:51:28.731-05:00  INFO 12868 --- [repaso] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1807 ms
+2025-09-15T17:51:28.985-05:00  INFO 12868 --- [repaso] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-15T17:51:29.074-05:00  INFO 12868 --- [repaso] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-15T17:51:29.118-05:00  INFO 12868 --- [repaso] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-15T17:51:29.543-05:00  INFO 12868 --- [repaso] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-15T17:51:29.598-05:00  INFO 12868 --- [repaso] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-15T17:51:30.316-05:00  INFO 12868 --- [repaso] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@7417ef4f
+2025-09-15T17:51:30.319-05:00  INFO 12868 --- [repaso] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-15T17:51:30.827-05:00  INFO 12868 --- [repaso] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-15T17:51:31.968-05:00  INFO 12868 --- [repaso] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-15T17:51:33.001-05:00 ERROR 12868 --- [repaso] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [tbl_categorias]
+2025-09-15T17:51:33.002-05:00  WARN 12868 --- [repaso] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [tbl_categorias]
+2025-09-15T17:51:33.003-05:00  INFO 12868 --- [repaso] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-15T17:51:33.018-05:00  INFO 12868 --- [repaso] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-15T17:51:33.021-05:00  INFO 12868 --- [repaso] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-09-15T17:51:33.032-05:00  INFO 12868 --- [repaso] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-15T17:51:33.054-05:00 ERROR 12868 --- [repaso] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [tbl_categorias]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.5.jar:3.5.5]
+	at com.example.repaso.RepasoApplication.main(RepasoApplication.java:10) ~[classes/:na]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [tbl_categorias]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:431) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.10.jar:6.2.10]
+	... 15 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [tbl_categorias]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:136) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:46) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:99) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:77) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:289) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.10.jar:6.2.10]
+	... 19 common frames omitted
+
+2025-09-15T17:52:22.600-05:00  INFO 12352 --- [repaso] [main] com.example.repaso.RepasoApplication     : Starting RepasoApplication using Java 21.0.6 with PID 12352 (C:\Users\docente.fia\Documents\lp2\repaso\target\classes started by docente.fia in C:\Users\docente.fia\Documents\lp2\repaso)
+2025-09-15T17:52:22.604-05:00  INFO 12352 --- [repaso] [main] com.example.repaso.RepasoApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-09-15T17:52:23.853-05:00  INFO 12352 --- [repaso] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-15T17:52:23.976-05:00  INFO 12352 --- [repaso] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 1 JPA repository interface.
+2025-09-15T17:52:24.538-05:00  INFO 12352 --- [repaso] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2025-09-15T17:52:24.560-05:00  INFO 12352 --- [repaso] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-15T17:52:24.561-05:00  INFO 12352 --- [repaso] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-15T17:52:24.643-05:00  INFO 12352 --- [repaso] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-15T17:52:24.644-05:00  INFO 12352 --- [repaso] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1968 ms
+2025-09-15T17:52:24.908-05:00  INFO 12352 --- [repaso] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-15T17:52:24.982-05:00  INFO 12352 --- [repaso] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-15T17:52:25.023-05:00  INFO 12352 --- [repaso] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-15T17:52:25.349-05:00  INFO 12352 --- [repaso] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-15T17:52:25.391-05:00  INFO 12352 --- [repaso] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-15T17:52:25.889-05:00  INFO 12352 --- [repaso] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@27afbf14
+2025-09-15T17:52:25.891-05:00  INFO 12352 --- [repaso] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-15T17:52:26.260-05:00  INFO 12352 --- [repaso] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-15T17:52:27.229-05:00  INFO 12352 --- [repaso] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-15T17:52:27.464-05:00  INFO 12352 --- [repaso] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-15T17:52:27.673-05:00  WARN 12352 --- [repaso] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'categoriaController' defined in file [C:\Users\docente.fia\Documents\lp2\repaso\target\classes\com\example\repaso\controller\general\CategoriaController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'categoriaServiceImpl' defined in file [C:\Users\docente.fia\Documents\lp2\repaso\target\classes\com\example\repaso\service\impl\CategoriaServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'categoriaServiceImpl': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+2025-09-15T17:52:27.674-05:00  INFO 12352 --- [repaso] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-15T17:52:27.677-05:00  INFO 12352 --- [repaso] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-15T17:52:27.697-05:00  INFO 12352 --- [repaso] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-15T17:52:27.702-05:00  INFO 12352 --- [repaso] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-09-15T17:52:27.721-05:00  INFO 12352 --- [repaso] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-15T17:52:27.739-05:00 ERROR 12352 --- [repaso] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   categoriaController defined in file [C:\Users\docente.fia\Documents\lp2\repaso\target\classes\com\example\repaso\controller\general\CategoriaController.class]
+┌─────┐
+|  categoriaServiceImpl defined in file [C:\Users\docente.fia\Documents\lp2\repaso\target\classes\com\example\repaso\service\impl\CategoriaServiceImpl.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2025-09-15T17:54:12.660-05:00  INFO 7152 --- [repaso] [main] com.example.repaso.RepasoApplication     : Starting RepasoApplication using Java 21.0.6 with PID 7152 (C:\Users\docente.fia\Documents\lp2\repaso\target\classes started by docente.fia in C:\Users\docente.fia\Documents\lp2\repaso)
+2025-09-15T17:54:12.663-05:00  INFO 7152 --- [repaso] [main] com.example.repaso.RepasoApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-09-15T17:54:13.606-05:00  INFO 7152 --- [repaso] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-15T17:54:13.674-05:00  INFO 7152 --- [repaso] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interface.
+2025-09-15T17:54:14.128-05:00  INFO 7152 --- [repaso] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2025-09-15T17:54:14.145-05:00  INFO 7152 --- [repaso] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-15T17:54:14.145-05:00  INFO 7152 --- [repaso] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-15T17:54:14.206-05:00  INFO 7152 --- [repaso] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-15T17:54:14.206-05:00  INFO 7152 --- [repaso] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1488 ms
+2025-09-15T17:54:14.429-05:00  INFO 7152 --- [repaso] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-15T17:54:14.502-05:00  INFO 7152 --- [repaso] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-15T17:54:14.544-05:00  INFO 7152 --- [repaso] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-15T17:54:14.875-05:00  INFO 7152 --- [repaso] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-15T17:54:14.912-05:00  INFO 7152 --- [repaso] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-15T17:54:15.379-05:00  INFO 7152 --- [repaso] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@27afbf14
+2025-09-15T17:54:15.381-05:00  INFO 7152 --- [repaso] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-15T17:54:15.764-05:00  INFO 7152 --- [repaso] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-15T17:54:16.783-05:00  INFO 7152 --- [repaso] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-15T17:54:16.985-05:00  INFO 7152 --- [repaso] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-15T17:54:17.182-05:00  WARN 7152 --- [repaso] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'categoriaController' defined in file [C:\Users\docente.fia\Documents\lp2\repaso\target\classes\com\example\repaso\controller\general\CategoriaController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'categoriaServiceImpl' defined in file [C:\Users\docente.fia\Documents\lp2\repaso\target\classes\com\example\repaso\service\impl\CategoriaServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'categoriaServiceImpl': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+2025-09-15T17:54:17.183-05:00  INFO 7152 --- [repaso] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-15T17:54:17.186-05:00  INFO 7152 --- [repaso] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-15T17:54:17.207-05:00  INFO 7152 --- [repaso] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-15T17:54:17.211-05:00  INFO 7152 --- [repaso] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-09-15T17:54:17.225-05:00  INFO 7152 --- [repaso] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-15T17:54:17.246-05:00 ERROR 7152 --- [repaso] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   categoriaController defined in file [C:\Users\docente.fia\Documents\lp2\repaso\target\classes\com\example\repaso\controller\general\CategoriaController.class]
+┌─────┐
+|  categoriaServiceImpl defined in file [C:\Users\docente.fia\Documents\lp2\repaso\target\classes\com\example\repaso\service\impl\CategoriaServiceImpl.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2025-09-15T17:55:50.169-05:00  INFO 16496 --- [repaso] [main] com.example.repaso.RepasoApplication     : Starting RepasoApplication using Java 21.0.6 with PID 16496 (C:\Users\docente.fia\Documents\lp2\repaso\target\classes started by docente.fia in C:\Users\docente.fia\Documents\lp2\repaso)
+2025-09-15T17:55:50.172-05:00  INFO 16496 --- [repaso] [main] com.example.repaso.RepasoApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-09-15T17:55:51.061-05:00  INFO 16496 --- [repaso] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-15T17:55:51.184-05:00  INFO 16496 --- [repaso] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 1 JPA repository interface.
+2025-09-15T17:55:51.726-05:00  INFO 16496 --- [repaso] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2025-09-15T17:55:51.746-05:00  INFO 16496 --- [repaso] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-15T17:55:51.746-05:00  INFO 16496 --- [repaso] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-15T17:55:51.808-05:00  INFO 16496 --- [repaso] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-15T17:55:51.808-05:00  INFO 16496 --- [repaso] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1588 ms
+2025-09-15T17:55:52.041-05:00  INFO 16496 --- [repaso] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-15T17:55:52.106-05:00  INFO 16496 --- [repaso] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-15T17:55:52.139-05:00  INFO 16496 --- [repaso] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-15T17:55:52.490-05:00  INFO 16496 --- [repaso] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-15T17:55:52.519-05:00  INFO 16496 --- [repaso] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-15T17:55:52.950-05:00  INFO 16496 --- [repaso] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@598657cd
+2025-09-15T17:55:52.953-05:00  INFO 16496 --- [repaso] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-15T17:55:53.282-05:00  INFO 16496 --- [repaso] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-15T17:55:54.248-05:00  INFO 16496 --- [repaso] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-15T17:55:54.456-05:00  INFO 16496 --- [repaso] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-15T17:55:54.675-05:00  WARN 16496 --- [repaso] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'categoriaController' defined in file [C:\Users\docente.fia\Documents\lp2\repaso\target\classes\com\example\repaso\controller\general\CategoriaController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'categoriaServiceImpl' defined in file [C:\Users\docente.fia\Documents\lp2\repaso\target\classes\com\example\repaso\service\impl\CategoriaServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'categoriaServiceImpl': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+2025-09-15T17:55:54.675-05:00  INFO 16496 --- [repaso] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-15T17:55:54.677-05:00  INFO 16496 --- [repaso] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-15T17:55:54.693-05:00  INFO 16496 --- [repaso] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-15T17:55:54.696-05:00  INFO 16496 --- [repaso] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-09-15T17:55:54.708-05:00  INFO 16496 --- [repaso] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-15T17:55:54.725-05:00 ERROR 16496 --- [repaso] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   categoriaController defined in file [C:\Users\docente.fia\Documents\lp2\repaso\target\classes\com\example\repaso\controller\general\CategoriaController.class]
+┌─────┐
+|  categoriaServiceImpl defined in file [C:\Users\docente.fia\Documents\lp2\repaso\target\classes\com\example\repaso\service\impl\CategoriaServiceImpl.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2025-09-15T17:57:53.289-05:00  INFO 11524 --- [repaso] [main] com.example.repaso.RepasoApplication     : Starting RepasoApplication using Java 21.0.6 with PID 11524 (C:\Users\docente.fia\Documents\lp2\repaso\target\classes started by docente.fia in C:\Users\docente.fia\Documents\lp2\repaso)
+2025-09-15T17:57:53.293-05:00  INFO 11524 --- [repaso] [main] com.example.repaso.RepasoApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-09-15T17:57:54.174-05:00  INFO 11524 --- [repaso] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-15T17:57:54.266-05:00  INFO 11524 --- [repaso] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 1 JPA repository interface.
+2025-09-15T17:57:54.764-05:00  INFO 11524 --- [repaso] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2025-09-15T17:57:54.779-05:00  INFO 11524 --- [repaso] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-15T17:57:54.780-05:00  INFO 11524 --- [repaso] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-15T17:57:54.834-05:00  INFO 11524 --- [repaso] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-15T17:57:54.834-05:00  INFO 11524 --- [repaso] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1485 ms
+2025-09-15T17:57:55.066-05:00  INFO 11524 --- [repaso] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-15T17:57:55.135-05:00  INFO 11524 --- [repaso] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-15T17:57:55.170-05:00  INFO 11524 --- [repaso] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-15T17:57:55.488-05:00  INFO 11524 --- [repaso] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-15T17:57:55.520-05:00  INFO 11524 --- [repaso] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-15T17:57:56.029-05:00  INFO 11524 --- [repaso] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@425b5fe2
+2025-09-15T17:57:56.030-05:00  INFO 11524 --- [repaso] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-15T17:57:56.354-05:00  INFO 11524 --- [repaso] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-15T17:57:57.312-05:00  INFO 11524 --- [repaso] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-15T17:57:57.513-05:00  INFO 11524 --- [repaso] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-15T17:57:57.871-05:00  WARN 11524 --- [repaso] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-15T17:57:58.418-05:00  INFO 11524 --- [repaso] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2025-09-15T17:57:58.428-05:00  INFO 11524 --- [repaso] [main] com.example.repaso.RepasoApplication     : Started RepasoApplication in 5.693 seconds (process running for 6.413)
+2025-09-15T17:58:44.621-05:00  INFO 11524 --- [repaso] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-15T17:58:44.622-05:00  INFO 11524 --- [repaso] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-15T17:58:44.623-05:00  INFO 11524 --- [repaso] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-15T18:01:19.287-05:00  INFO 11524 --- [repaso] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-15T18:01:19.292-05:00  INFO 11524 --- [repaso] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-15T18:01:19.296-05:00  INFO 11524 --- [repaso] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-15T18:01:19.298-05:00  INFO 11524 --- [repaso] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-15T18:01:19.313-05:00  INFO 11524 --- [repaso] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
